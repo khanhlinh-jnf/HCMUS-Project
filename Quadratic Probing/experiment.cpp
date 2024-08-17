@@ -12,7 +12,7 @@ struct Book {
 
 int main() {
   fstream file;
-  file.open("books.txt", ios::in);
+  file.open("../books.txt", ios::in);
 
   hashTable<string, string> table;
   table.init(300000);
@@ -110,7 +110,7 @@ int main() {
   }
   stop = high_resolution_clock::now();
   duration = duration_cast<microseconds>(stop - start);
-  cout << "Search: " << duration.count() << " microseconds" << endl;
+  cout << "Linear Search: " << duration.count() << " microseconds" << endl;
 
   delete[] array;
   file.close();
